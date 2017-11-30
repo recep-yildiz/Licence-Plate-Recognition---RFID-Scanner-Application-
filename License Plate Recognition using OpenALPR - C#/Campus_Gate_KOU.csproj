@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34A0DFE3-CD2A-4314-9614-281BA3C21DE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Campus_Gate_KOU</RootNamespace>
+    <AssemblyName>Campus_Gate_KOU</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5\Release\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5\Release\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Vision">
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5\Release\AForge.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="AlienRFID2">
+      <HintPath>..\..\..\..\..\Desktop\KOU_RFID_Plaka_v1\KOU_RFID_Plaka\bin\debug\AlienRFID2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MjpegProcessor, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Properties\MJPEG_bin\MjpegProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Desktop\KOU_RFID_Plaka_v1\KOU_RFID_Plaka\bin\debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="openalpr-net, Version=2.3.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\openalpr-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizeLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizeLogin.Designer.cs">
+      <DependentUpon>AuthorizeLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorizeLogOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizeLogOut.Designer.cs">
+      <DependentUpon>AuthorizeLogOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateRecord.Designer.cs">
+      <DependentUpon>CreateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginControl.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Config.cs" />
+    <Compile Include="Models\Entry.cs" />
+    <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\Title.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnregisteredRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnregisteredRecords.Designer.cs">
+      <DependentUpon>UnregisteredRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Database\Mysql.cs" />
+    <Compile Include="Utils\Database\MysqlDatas.cs" />
+    <Compile Include="Utils\Database\Sqlite.cs" />
+    <Compile Include="Utils\Database\SqliteDatas.cs" />
+    <Compile Include="Utils\Helper.cs" />
+    <Compile Include="Utils\querybuilder\Clauses\JoinClause.cs" />
+    <Compile Include="Utils\querybuilder\Clauses\LimitClause.cs" />
+    <Compile Include="Utils\querybuilder\Clauses\OrderByClause.cs" />
+    <Compile Include="Utils\querybuilder\Clauses\TopClause.cs" />
+    <Compile Include="Utils\querybuilder\Clauses\WhereClause.cs" />
+    <Compile Include="Utils\querybuilder\Clauses\WhereStatement.cs" />
+    <Compile Include="Utils\querybuilder\DeleteQueryBuilder.cs" />
+    <Compile Include="Utils\querybuilder\Enums\Comparison.cs" />
+    <Compile Include="Utils\querybuilder\Enums\JoinType.cs" />
+    <Compile Include="Utils\querybuilder\Enums\Limit.cs" />
+    <Compile Include="Utils\querybuilder\Enums\LogicOperator.cs" />
+    <Compile Include="Utils\querybuilder\Enums\Sorting.cs" />
+    <Compile Include="Utils\querybuilder\Enums\TopUnit.cs" />
+    <Compile Include="Utils\querybuilder\Escape.cs" />
+    <Compile Include="Utils\querybuilder\InsertQueryBuilder.cs" />
+    <Compile Include="Utils\querybuilder\IQueryBuilder.cs" />
+    <Compile Include="Utils\querybuilder\SelectQueryBuilder.cs" />
+    <Compile Include="Utils\querybuilder\SqlLiteral.cs" />
+    <Compile Include="Utils\querybuilder\UpdateQueryBuilder.cs" />
+    <EmbeddedResource Include="AuthorizeLogin.resx">
+      <DependentUpon>AuthorizeLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorizeLogOut.resx">
+      <DependentUpon>AuthorizeLogOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateRecord.resx">
+      <DependentUpon>CreateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Campus_Gate_KOU.AddRecord.resources" />
+    <EmbeddedResource Include="obj\Debug\Campus_Gate_KOU.CreateRecord.resources" />
+    <EmbeddedResource Include="obj\Debug\Campus_Gate_KOU.LoginForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Campus_Gate_KOU.MainWindow.resources" />
+    <EmbeddedResource Include="obj\Debug\Campus_Gate_KOU.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Campus_Gate_KOU.Reports.resources" />
+    <EmbeddedResource Include="obj\Release\Campus_Gate_KOU.CreateRecord.resources" />
+    <EmbeddedResource Include="obj\Release\Campus_Gate_KOU.LoginForm.resources" />
+    <EmbeddedResource Include="obj\Release\Campus_Gate_KOU.MainWindow.resources" />
+    <EmbeddedResource Include="obj\Release\Campus_Gate_KOU.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Release\Campus_Gate_KOU.Reports.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnregisteredRecords.resx">
+      <DependentUpon>UnregisteredRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\Campus_Gate_KOU.exe.config" />
+    <None Include="bin\Debug\Campus_Gate_KOU.vshost.exe.config" />
+    <None Include="bin\Debug\Campus_Gate_KOU.vshost.exe.manifest" />
+    <None Include="bin\Debug\openalpr.conf" />
+    <None Include="bin\Debug\runtime_data\cameras.yaml" />
+    <None Include="bin\Debug\runtime_data\config\au.conf" />
+    <None Include="bin\Debug\runtime_data\config\auwide.conf" />
+    <None Include="bin\Debug\runtime_data\config\eu.conf" />
+    <None Include="bin\Debug\runtime_data\config\gb.conf" />
+    <None Include="bin\Debug\runtime_data\config\kr.conf" />
+    <None Include="bin\Debug\runtime_data\config\kr2.conf" />
+    <None Include="bin\Debug\runtime_data\config\mx.conf" />
+    <None Include="bin\Debug\runtime_data\config\sg.conf" />
+    <None Include="bin\Debug\runtime_data\config\us.conf" />
+    <None Include="bin\Debug\runtime_data\ocr\tessdata\lau.traineddata" />
+    <None Include="bin\Debug\runtime_data\ocr\tessdata\leu.traineddata" />
+    <None Include="bin\Debug\runtime_data\ocr\tessdata\lgb.traineddata" />
+    <None Include="bin\Debug\runtime_data\ocr\tessdata\lkr.traineddata" />
+    <None Include="bin\Debug\runtime_data\ocr\tessdata\lkr2.traineddata" />
+    <None Include="bin\Debug\runtime_data\ocr\tessdata\lsg.traineddata" />
+    <None Include="bin\Debug\runtime_data\ocr\tessdata\lus.traineddata" />
+    <None Include="bin\Debug\runtime_data\postprocess\au.patterns" />
+    <None Include="bin\Debug\runtime_data\postprocess\eu.patterns" />
+    <None Include="bin\Debug\runtime_data\postprocess\gb.patterns" />
+    <None Include="bin\Debug\runtime_data\postprocess\kr.patterns" />
+    <None Include="bin\Debug\runtime_data\postprocess\mx.patterns" />
+    <None Include="bin\Debug\runtime_data\postprocess\sg.patterns" />
+    <None Include="bin\Debug\runtime_data\postprocess\us.patterns" />
+    <None Include="bin\Release\Campus_Gate_KOU.exe.config" />
+    <None Include="bin\Release\Campus_Gate_KOU.vshost.exe.config" />
+    <None Include="bin\Release\Campus_Gate_KOU.vshost.exe.manifest" />
+    <None Include="obj\Debug\Campus_Gate_KOU.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\Campus_Gate_KOU.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Campus_Gate_KOU.csproj.GenerateResource.Cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AForge.Controls.dll" />
+    <Content Include="bin\Debug\AForge.Controls.xml" />
+    <Content Include="bin\Debug\AForge.dll" />
+    <Content Include="bin\Debug\AForge.Imaging.dll" />
+    <Content Include="bin\Debug\AForge.Imaging.xml" />
+    <Content Include="bin\Debug\AForge.Math.dll" />
+    <Content Include="bin\Debug\AForge.Math.xml" />
+    <Content Include="bin\Debug\AForge.Video.DirectShow.dll" />
+    <Content Include="bin\Debug\AForge.Video.DirectShow.xml" />
+    <Content Include="bin\Debug\AForge.Video.dll" />
+    <Content Include="bin\Debug\AForge.Video.xml" />
+    <Content Include="bin\Debug\AForge.Vision.dll" />
+    <Content Include="bin\Debug\AForge.Vision.xml" />
+    <Content Include="bin\Debug\AForge.xml" />
+    <Content Include="bin\Debug\AlienRFID2.dll" />
+    <Content Include="bin\Debug\Campus_Gate_KOU.exe" />
+    <Content Include="bin\Debug\Campus_Gate_KOU.pdb" />
+    <Content Include="bin\Debug\Campus_Gate_KOU.vshost.exe" />
+    <Content Include="bin\Debug\liblept170.dll" />
+    <Content Include="bin\Debug\MetroFramework.Design.dll" />
+    <Content Include="bin\Debug\MetroFramework.dll" />
+    <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Debug\MjpegProcessor.dll" />
+    <Content Include="bin\Debug\MjpegProcessorSL.dll" />
+    <Content Include="bin\Debug\MjpegProcessorWP7.dll" />
+    <Content Include="bin\Debug\MjpegProcessorWP8.dll" />
+    <Content Include="bin\Debug\MjpegProcessorXna4.dll" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\openalpr-net.dll" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ak2008.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\al2002.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ar2006.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\az1996.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ca1993.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\co2000.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ct2000.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\dc2003.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\de1970.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\fl2004.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ga2007.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\hi1991.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ia1997.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\id2006.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\il2002.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\in2009.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ks2007b.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ky2005.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\la2006.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ma1987.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\md2006.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\md2006b.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\md2006c.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\me1999.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\me1999b.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\mi2007.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\mn2000.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\mo2006b.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\mo2009.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ms2003.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\mt2010.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\nc1982.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\nd1993.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ne2005.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\nh1999.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\nj1993.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\nm2010.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\nv2001.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ny2010.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\oh2004.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ok2009.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\or1990.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\pa2004.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ri1996.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\sc2008.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\sd2007.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\tn2007.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\tx2009.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\ut2009.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\va2003.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\vt1985.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\wa1998.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\wi2007.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\wv1995.jpg" />
+    <Content Include="bin\Debug\runtime_data\keypoints\us\wy2000.jpg" />
+    <Content Include="bin\Debug\runtime_data\postprocess\readme.txt" />
+    <Content Include="bin\Debug\runtime_data\region\au.xml" />
+    <Content Include="bin\Debug\runtime_data\region\eu.xml" />
+    <Content Include="bin\Debug\runtime_data\region\kr2.xml" />
+    <Content Include="bin\Debug\runtime_data\region\us.xml" />
+    <Content Include="bin\Release\AForge.Controls.dll" />
+    <Content Include="bin\Release\AForge.Controls.xml" />
+    <Content Include="bin\Release\AForge.dll" />
+    <Content Include="bin\Release\AForge.Imaging.dll" />
+    <Content Include="bin\Release\AForge.Imaging.xml" />
+    <Content Include="bin\Release\AForge.Math.dll" />
+    <Content Include="bin\Release\AForge.Math.xml" />
+    <Content Include="bin\Release\AForge.Video.DirectShow.dll" />
+    <Content Include="bin\Release\AForge.Video.DirectShow.xml" />
+    <Content Include="bin\Release\AForge.Video.dll" />
+    <Content Include="bin\Release\AForge.Video.xml" />
+    <Content Include="bin\Release\AForge.Vision.dll" />
+    <Content Include="bin\Release\AForge.Vision.xml" />
+    <Content Include="bin\Release\AForge.xml" />
+    <Content Include="bin\Release\AlienRFID2.dll" />
+    <Content Include="bin\Release\Campus_Gate_KOU.exe" />
+    <Content Include="bin\Release\Campus_Gate_KOU.pdb" />
+    <Content Include="bin\Release\Campus_Gate_KOU.vshost.exe" />
+    <Content Include="bin\Release\MetroFramework.Design.dll" />
+    <Content Include="bin\Release\MetroFramework.dll" />
+    <Content Include="bin\Release\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Release\MjpegProcessor.dll" />
+    <Content Include="bin\Release\MySql.Data.dll" />
+    <Content Include="bin\Release\openalpr-net.dll" />
+    <Content Include="obj\Debug\Campus_Gate_KOU.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Campus_Gate_KOU.exe" />
+    <Content Include="obj\Debug\Campus_Gate_KOU.pdb" />
+    <Content Include="obj\Release\Campus_Gate_KOU.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Campus_Gate_KOU.exe" />
+    <Content Include="obj\Release\Campus_Gate_KOU.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
