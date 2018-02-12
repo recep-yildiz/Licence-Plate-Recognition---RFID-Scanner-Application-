@@ -1,4 +1,4 @@
-# License-Plate-Recognition-using-OpenALPR---C-
+# License-Plate-Recognition-using-OpenALPR---C-Sharp-
 
 • Lisans eğitimi ilk staj döneminde hazırlamaya çalıştığım plaka tanıma ve RFID etiket okuma özelliklerinin bir arada bulunduğu bir projedir.
 
