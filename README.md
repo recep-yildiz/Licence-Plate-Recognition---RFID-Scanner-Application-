@@ -13,8 +13,6 @@
 
 ** Eksiklikler **
 
-• AForge kütüphanesi ile hareket sensörü eklemeye çalıştım ancak IP kamera ile uyumlu hale getiremedim, sadece USB kameralar ile çalıştırabildim.
+• AForge kütüphanesi ile oluşturulan hareket sensörünün IP kamera uyumluluğu sorunu
 
-• Program multithread hale getirilebilir, tek çekirdekte çalışırken performans sıkıntıları yaşanıyor. Bilindiği üzere görüntü işleme, işlemci açısından oldukça zahmetli bir iştir.
-
-• Türk plakaları için daha optimize bir config dosyası hazırlanabilir.
+• Türk plakaları için daha optimize bir config dosyası hazırlanabilir. (Dataset eksikliği)
